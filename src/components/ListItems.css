@@ -1,0 +1,9 @@
+.clearBtn {
+	margin: 30px auto;
+}
+.clearBtn > button {
+	margin: auto 10px;
+	font-size: 20px;
+
+	width: 140px;
+}
