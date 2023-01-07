@@ -5,6 +5,7 @@ import ListItems from "./ListItems";
 import { confirmAlert } from "react-confirm-alert"; // Import
 
 class App extends Component {
+	counter = 4; // we have 4 itemse in state
 	state = {
 		items: [
 			{
@@ -71,11 +72,24 @@ class App extends Component {
 			items,
 		});
 	};
+	addItem = (text) => {
+		const item = {
+			id: this.counter,
+			text, // text form imnput
+			active: true,
+		};
+		this.counter++;
+
+		this.setState((prevState) => ({
+			items: [...prevState.items, item],
+		}));
+		return true;
+	};
 	render() {
 		return (
 			<div className='App'>
 				<h1>Shopping List</h1>
-				<AddToList />
+				<AddToList addItem={this.addItem} />
 				<ListItems
 					items={this.state.items}
 					chengeItemStatus={this.handleChangeItemStatus}
