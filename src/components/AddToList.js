@@ -32,7 +32,7 @@ class AddToList extends Component {
 			<>
 				<input
 					type='text'
-					placeholder='Add a product to list'
+					placeholder='Add a product to the list'
 					value={this.state.text}
 					onChange={this.handleText}
 				/>

@@ -18,8 +18,8 @@ const ListItems = (props) => {
 			<div>{activeItems}</div>
 			<div className='doneItems'>{doneItems}</div>
 			<div className='clearBtn'>
-				<button onClick={props.clearAll}>Cleer All</button>
-				<button onClick={props.clearDone}>Cleer Done</button>
+				<button onClick={props.clearAll}>Clear All</button>
+				<button onClick={props.clearDone}>Clear Done</button>
 			</div>
 		</>
 	);
