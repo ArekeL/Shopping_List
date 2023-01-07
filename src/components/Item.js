@@ -10,7 +10,9 @@ const Item = (props) => {
 							<p>{props.item.text}</p>
 						</td>
 						<td>
-							<button className='btnDone' onClick={props.chengeItemStatus}>
+							<button
+								className='btnDone'
+								onClick={() => props.chengeItemStatus(props.item.id)}>
 								X
 							</button>
 						</td>

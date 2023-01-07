@@ -7,3 +7,7 @@
 
 	width: 140px;
 }
+.doneItems {
+	text-decoration: line-through;
+	font-style: italic;
+}

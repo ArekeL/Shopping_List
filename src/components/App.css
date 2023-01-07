@@ -16,3 +16,21 @@ button:hover {
 	color: white;
 	transition: 0.5s;
 }
+
+.react-confirm-alert-overlay {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.custom-ui {
+	background-color: rgba(0, 0, 0, 0.9);
+	width: 300px;
+	height: 140px;
+	margin: 150px auto;
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+}

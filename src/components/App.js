@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import "./App.css";
 import AddToList from "./AddToList";
 import ListItems from "./ListItems";
+import { confirmAlert } from "react-confirm-alert"; // Import
 
 class App extends Component {
 	state = {
 		items: [
 			{
 				id: 0,
-				text: "3kg marchewki",
+				text: "5kg pomidorów malinowych twardych",
 				active: true,
 			},
 			{
@@ -29,14 +30,46 @@ class App extends Component {
 		],
 	};
 
-	handleChangeItemStatus = () => {
-		console.log("item bought");
+	handleChangeItemStatus = (id) => {
+		const items = [...this.state.items];
+		items.forEach((item) => {
+			if (item.id === id) {
+				item.active = false;
+			}
+		});
+		this.setState({
+			items,
+		});
 	};
 	handleClearAll = () => {
-		console.log("Clear all items");
+		confirmAlert({
+			customUI: ({ onClose }) => {
+				return (
+					<div className='custom-ui'>
+						<h1>Are you sure?</h1>
+						<p>You want to clear this list?</p>
+						<button onClick={onClose}>No</button>
+						<button
+							onClick={() => {
+								this.setState({
+									items: [],
+								});
+								onClose();
+							}}>
+							Yes, Delete it!
+						</button>
+					</div>
+				);
+			},
+		});
 	};
 	handleClearDone = () => {
-		console.log("Clear done items");
+		let items = [...this.state.items];
+		items = items.filter((item) => item.active === true);
+
+		this.setState({
+			items,
+		});
 	};
 	render() {
 		return (
