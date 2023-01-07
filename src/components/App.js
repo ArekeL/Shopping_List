@@ -13,7 +13,7 @@ class App extends Component {
 			},
 			{
 				id: 1,
-				text: "2 wody dazowane",
+				text: "2 wody gazowane",
 				active: true,
 			},
 			{
@@ -38,7 +38,6 @@ class App extends Component {
 	handleClearDone = () => {
 		console.log("Clear done items");
 	};
-
 	render() {
 		return (
 			<div className='App'>

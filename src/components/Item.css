@@ -1,0 +1,20 @@
+.btnDone {
+	font-size: 14px;
+	border-radius: 50%;
+}
+
+.textTable {
+	width: 70vw;
+	text-align: left;
+}
+
+.itemTable {
+	display: table;
+	margin: 10px auto;
+}
+td > p {
+	font-size: 18px;
+	margin: 0px auto;
+	line-height: 29px;
+	border-bottom: 1px black solid;
+}

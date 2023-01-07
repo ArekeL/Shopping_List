@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./AddToList.css";
 
 class AddToList extends Component {
 	state = {};
@@ -8,8 +9,10 @@ class AddToList extends Component {
 	render() {
 		return (
 			<>
-				<input type='text' />
-				<button onClick={this.handleAddToList}>Add</button>
+				<input type='text' placeholder='Add a product to list' />
+				<button className='btnAdd' onClick={this.handleAddToList}>
+					Add
+				</button>
 			</>
 		);
 	}
